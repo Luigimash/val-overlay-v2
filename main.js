@@ -87,7 +87,58 @@ async function getSheetsValue() {
 
 function updateElements(response) {
     let values = response.result.values;
+    let stringArr;
 
+    readFile().then(function(returnRequest) {
+        stringArr = returnRequest.split(/\r?\n/);
+        console.log(stringArr[0] + stringArr[1]);
+    }) //I don't really remember why this works like this, but this is how it works
+
+
+    //check result from pixel checker to determine which side (atk, def) t1 is on
+    if (stringArr[0] == stringArr[1] == 'true') {
+        console.log("t1 = defenders");
+        /*pseudocode: get id of both team's wins, change them to the
+        appropriate source color and number according to game score & stringArr result */
+    }
+    else if (stringArr[0] == stringArr[1] == 'false') {
+        console.log("t1 = attackers");
+    }
+    else {
+        console.log("error with detecting correct side of t1");
+    }
+}
+
+function readFile () {
+    let req = new XMLHttpRequest();
+    //object defined
+
+    return new Promise((resolve, reject) => {
+
+        req.onreadystatechange = (e) => {
+            if (req.readyState !== 4) {
+                return;
+            }
+
+            if (req.status === 200) {
+                console.log('SUCCESS', req.responseText);
+                resolve(req.responseText); //returns req
+            } else {
+                console.warn('request_error');
+            }
+        };
+
+        req.open('GET', SIDECOLORSTXT, true);
+        req.send();
+    });
+    // req.onload=function () {
+    //     console.log(req.responseText);
+    //     return req.responseText;
+    // }
+    //
+    // req.open("GET", SIDECOLORSTXT, true);
+    // req.send();
+    // return req.responseText;
 }
 
 function startTimer() {

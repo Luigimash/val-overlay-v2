@@ -10,3 +10,4 @@ var SPREADSHEETID = '1Tme3Jjw46wLTV_obzmON0FB1e7vEam3JZvo_Ocnd8Vc';
 
 // Discovery doc URL for APIs used by the quickstart, it's apparently useful
 const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+const SIDECOLORSTXT = "sideColors.txt";

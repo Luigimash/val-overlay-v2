@@ -1,0 +1,42 @@
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\vscode test.exe
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\vscode test.deps.json
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\vscode test.runtimeconfig.json
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\vscode test.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\vscode test.pdb
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.csproj.AssemblyReference.cache
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.AssemblyInfoInputs.cache
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.AssemblyInfo.cs
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.csproj.CoreCompileInputs.cache
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.dll
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\refint\vscode test.dll
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.pdb
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.genruntimeconfig.cache
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\ref\vscode test.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Production Assets\Game Overlays v2\vscode test\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Production Assets\Game Overlays v2\vscode test\obj\Debug\net6.0\vscode test.csproj.CopyComplete
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\vscode test.exe
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\vscode test.deps.json
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\vscode test.runtimeconfig.json
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\vscode test.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\vscode test.pdb
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.csproj.AssemblyReference.cache
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.AssemblyInfoInputs.cache
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.AssemblyInfo.cs
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.csproj.CoreCompileInputs.cache
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.csproj.CopyComplete
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\refint\vscode test.dll
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.pdb
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\vscode test.genruntimeconfig.cache
+C:\Production Assets\Game Overlays v2\val-overlay-v2\obj\Debug\net6.0\ref\vscode test.dll

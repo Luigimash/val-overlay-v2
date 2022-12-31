@@ -1,0 +1,83 @@
+:root {
+    --white: rgba(255,255,255,1);
+}
+
+.bodyClass {
+    background-image: url("/assets/wBg.png");
+    width:1920px;
+    height:1080px;
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+
+#topHeaderContainer {
+    position:relative;
+    width:1920px;
+    height:80px;
+    padding-top:65px;
+
+    display:flex;
+    justify-content: center; /*centers elements on x axis*/
+    align-items: center; /*sets baseline alignment in y-direction*/
+    flex-wrap: nowrap;
+    flex-direction:row;
+}
+
+#centerOffsetBox {
+    width:230px;
+    height:10px; /*height doesnt matter at all, just for debugging clarity*/
+    border: 0px solid green;
+    padding: 0px;
+}
+
+.teamText {
+    font-family: "BureauGrotesque";
+    font-size: 28px;
+    color: var(--white);
+}
+
+.teamIcon {
+    width:43px;
+    height:35px;
+    max-height: 34px;
+    max-width: 42px;
+}
+
+.teamIcon img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.teamText {
+    margin:8px;
+    width: 300px;
+    height:35px;
+}
+
+#leftTeamTxt {
+    position:relative;
+    top:4px;
+    text-align: right;
+}
+#rightTeamTxt {
+    position:relative;
+    top:4px;
+    text-align: left;
+}
+
+.winsClass {
+    position:absolute;
+    width:1920px;
+    height:100%;
+    left:0;
+    top:0;
+    right:0;
+}
+.winsClass img {
+    position:absolute;
+    width:1920px;
+    left:0;
+    top:0;
+}

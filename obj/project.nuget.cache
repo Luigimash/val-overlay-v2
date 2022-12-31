@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Uh2+tkh4OVf7ByQPVoklEiNf14grMr3cZ5krTT7Z5UeO+RSwAwCh9hfvdXCTNpkquDjbpp+QnFx1Ve54jcUI9g==",
+  "success": true,
+  "projectFilePath": "C:\\Production Assets\\Game Overlays v2\\val-overlay-v2\\vscode test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mario\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\mario\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\mario\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
