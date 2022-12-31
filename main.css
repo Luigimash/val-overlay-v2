@@ -51,19 +51,18 @@
 
 
 .teamText {
+    position:relative;
+    top:1px;
     margin:8px;
     width: 300px;
     height:35px;
+
 }
 
 #leftTeamTxt {
-    position:relative;
-    top:4px;
     text-align: right;
 }
 #rightTeamTxt {
-    position:relative;
-    top:4px;
     text-align: left;
 }
 

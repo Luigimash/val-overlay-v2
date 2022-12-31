@@ -2,33 +2,35 @@
 using System.IO;
 // See https://aka.ms/new-console-template for more information
 // USE VALORANT ON MAIN/DEFAULT MONITOR, DO NOT OBS ON SECONDARY MONITOR
-Console.WriteLine("Hello, World!");
+const int PULLRATE = 500; //Amount of time (milliseconds) per pixel check loop
+Console.WriteLine("Program.cs started, beginning to check pixels:");
 
 Console.WriteLine(GetColorAt(418,51) + " def (left) color");
 Console.WriteLine(GetColorAt(1504,50) + " atk (right) color");
+while (true) {
+    Color defColor = GetColorAt(418,51);
+    Color atkColor = GetColorAt(1504,50);
+    string[] output = new string[2];
+    if (defColor.G >= defColor.R) {
+        Console.WriteLine("defSide is green");
+        output[0] = "true";
+    }
+    else {
+        Console.WriteLine("defSide is red");
+            output[0] = "false";
+    }
 
-Color defColor = GetColorAt(418,51);
-Color atkColor = GetColorAt(1504,50);
-string[] output = new string[2];
-if (defColor.G >= defColor.R) {
-    Console.WriteLine("defSide");
-    output[0] = "true";
+    if (atkColor.R >= atkColor.G) {
+        Console.WriteLine("atkSide is red");
+        output[1] = "true";
+    }
+    else {
+        Console.WriteLine("atkSide is green");
+            output[1] = "false";
+    }
+    await File.WriteAllLinesAsync("sideColors.txt", output);
+    await Task.Delay(PULLRATE);
 }
-else {
-    Console.WriteLine("defSide = false");
-        output[0] = "false";
-}
-
-if (atkColor.R >= atkColor.G) {
-    Console.WriteLine("atkSide");
-    output[1] = "true";
-}
-else {
-    Console.WriteLine("atkSide = false");
-        output[1] = "false";
-}
-File.WriteAllLinesAsync("sideColors.txt", output);
-
 
 Color GetColorAt(int x, int y)
 {

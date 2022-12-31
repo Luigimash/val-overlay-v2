@@ -58,7 +58,7 @@ async function getSheetsValue() {
         response = await gapi.client.sheets.spreadsheets.values.get({
             //When changing sheets, update sheetID, and update the sheet name when updating range
             spreadsheetId: SPREADSHEETID,
-            range: 'GFX Controller!C5:D15',
+            range: 'GFX Controller!C20:D24',
         });
     } catch(err) {
         //error check
@@ -76,7 +76,7 @@ async function getSheetsValue() {
     }
     console.log('successful getSheetsValue()');
     //If successfully extracted data with no errors, execute updateElements()
-    updateElements(response);
+    await updateElements(response);
     return;
 }
 /* getSheetsValue() has completed, it now sends the updated data to updateElements(), which you will have to
@@ -85,28 +85,53 @@ async function getSheetsValue() {
  * Note: the values[][] array is default given as [row][column].
  */
 
-function updateElements(response) {
+async function updateElements(response) {
     let values = response.result.values;
-    let stringArr;
+    let stringArr=[];
+    let winsArr = ["l","r"];
 
-    readFile().then(function(returnRequest) {
-        stringArr = returnRequest.split(/\r?\n/);
-        console.log(stringArr[0] + stringArr[1]);
+    await readFile().then(function(returnRequest) {
+        stringArr = returnRequest.responseText.split(/\r?\n/);
     }) //I don't really remember why this works like this, but this is how it works
 
-
-    //check result from pixel checker to determine which side (atk, def) t1 is on
-    if (stringArr[0] == stringArr[1] == 'true') {
+    //check result from pixel checker to determine which side (atk, def) left team is on
+    if (stringArr[0]=='true' && stringArr[0]==stringArr[1]) {
+        let bgUrl = 'url(/assets/dOverlay.png)';
         console.log("t1 = defenders");
+        winsArr[0] += "d";
+        winsArr[1] += "a";
+        document.getElementsByClassName('bodyClass')[0].style.backgroundImage=bgUrl;
         /*pseudocode: get id of both team's wins, change them to the
         appropriate source color and number according to game score & stringArr result */
     }
-    else if (stringArr[0] == stringArr[1] == 'false') {
+    else if (stringArr[0]=='false' && stringArr[0]==stringArr[1]) {
+        let bgUrl = 'url(/assets/aOverlay.png)';
+        document.getElementsByClassName('bodyClass')[0].style.backgroundImage=bgUrl;
         console.log("t1 = attackers");
+        winsArr[0] += "a";
+        winsArr[1] += "d";
     }
     else {
         console.log("error with detecting correct side of t1");
     }
+
+    if (values[2][0]=='TRUE') {
+        fadeTextChange('leftTeamTxt', values[0][0], cWhite);
+        fadeTextChange('rightTeamTxt', values[1][0], cWhite);
+        winsArr[0] += values[0][1];
+        winsArr[1] += values[1][1];
+    }
+    else {
+        fadeTextChange('leftTeamTxt', values[1][0], cWhite);
+        fadeTextChange('rightTeamTxt', values[0][0], cWhite);
+        winsArr[0] += values[1][1];
+        winsArr[1] += values[0][1];
+    }
+    document.getElementById('bestOf').src="assets/wins/bo"+values[3][0]+".png";
+    document.getElementById('leftTeamIcon').src="assets/"+values[4][0];
+    document.getElementById('rightTeamIcon').src="assets/"+values[4][1];
+    document.getElementById('lWin').src="assets/wins/"+winsArr[0]+".png";
+    document.getElementById('rWin').src="assets/wins/"+winsArr[1]+".png";
 }
 
 function readFile () {
@@ -121,8 +146,8 @@ function readFile () {
             }
 
             if (req.status === 200) {
-                console.log('SUCCESS', req.responseText);
-                resolve(req.responseText); //returns req
+                console.log('SUCCESSFUL file read status 200)');
+                resolve(req); //returns req
             } else {
                 console.warn('request_error');
             }
