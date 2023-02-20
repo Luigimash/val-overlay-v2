@@ -28,6 +28,7 @@ let pauseTimer=false;
 let timerRef;
 let fadeTimer = false;
 let time = 0;
+let prevSideState = ''; //holds either d or a, corresponding to whichever side t1 was last pixel check
 /**
  * Callback after api.js is loaded.
  */
@@ -101,6 +102,7 @@ async function updateElements(response) {
         winsArr[0] += "d";
         winsArr[1] += "a";
         document.getElementsByClassName('bodyClass')[0].style.backgroundImage=bgUrl;
+        prevSideState = 'd';
         /*pseudocode: get id of both team's wins, change them to the
         appropriate source color and number according to game score & stringArr result */
     }
@@ -110,9 +112,18 @@ async function updateElements(response) {
         console.log("t1 = attackers");
         winsArr[0] += "a";
         winsArr[1] += "d";
+        prevSideState = 'a';
     }
     else {
         console.log("error with detecting correct side of t1");
+        if (prevSideState == 'a') {
+            winsArr[0] += 'a';
+            winsArr[1] += 'd';
+        }
+        else {
+            winsArr[0] += 'd';
+            winsArr[1] += 'a';
+        }
     }
 
     if (values[2][0]=='TRUE') {
@@ -135,6 +146,11 @@ async function updateElements(response) {
 }
 
 function readFile () {
+	//returns the XMLHTTPRequest, to call this function, take a look at the following code
+	/* 
+		await readFile().then(function(returnRequest) {
+        stringArr = returnRequest.responseText.split(/\r?\n/);  })
+	*/
     let req = new XMLHttpRequest();
     //object defined
 
@@ -156,14 +172,6 @@ function readFile () {
         req.open('GET', SIDECOLORSTXT, true);
         req.send();
     });
-    // req.onload=function () {
-    //     console.log(req.responseText);
-    //     return req.responseText;
-    // }
-    //
-    // req.open("GET", SIDECOLORSTXT, true);
-    // req.send();
-    // return req.responseText;
 }
 
 function startTimer() {
